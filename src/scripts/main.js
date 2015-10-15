@@ -20,7 +20,7 @@ energym.app = (($, window, undefined) => {
         setTimeout(() => {
             energym.hero.init();
             energym.loader.dissipate();
-        }, 1000);
+        }, 1500);
     };
 
     // On Scroll
