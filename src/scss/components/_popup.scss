@@ -1,0 +1,253 @@
+.mfp-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1042;
+
+	width: 100%;
+	height: 100%;
+
+	background: $black;
+	opacity: .7;
+
+	overflow: hidden;
+}
+
+.mfp-wrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1043;
+
+	width: 100%;
+	height: 100%;
+
+	outline: 0;
+	-webkit-backface-visibility: hidden;
+}
+
+.mfp-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+	padding: 0 8px;
+
+	text-align: center;
+
+	&:before {
+		vertical-align: middle;
+
+		display: inline-block;
+		height: 100%;
+		content: '';
+	}
+}
+
+.mfp-content {
+	position: relative;
+	vertical-align: middle;
+	z-index: 1045;
+	
+	display: inline-block;
+	margin: 0 auto;
+	
+	text-align: left;
+}
+
+.mfp-image-holder .mfp-content {
+	max-width: 100%;
+}
+
+.mfp-auto-cursor .mfp-content {
+	cursor: auto;
+}
+
+.mfp-figure:after {
+	position: absolute;
+	top: 40px;
+	bottom: 40px;
+	left: 0;
+	right: 0;
+	z-index: -1;
+
+	display: block;
+	width: auto;
+	height: auto;
+
+	box-shadow: 0 0 12px rgba(0,0,0,.9);
+	background: #444;
+
+	content: '';
+}
+
+img.mfp-img {
+	display: block;
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding: 40px 0;
+
+	line-height: 0;
+}
+
+/* Nav Arrows  & Close button*/ 
+button.mfp-arrow, button.mfp-close {
+	z-index: 1046;
+
+	display: block;
+	padding: 0;
+	background: 0;
+
+	box-shadow: none;
+	border: 0;
+
+	cursor: pointer;
+	overflow: visible;
+	-webkit-appearance: none;
+
+	outline: 0;
+}
+
+/* Nav Arrows */ 
+.mfp-arrow {
+	position: absolute;
+	top: 50%;
+
+	width: 90px;
+	height: 110px;
+	margin-top: -55px;
+
+	opacity: .65;
+	-webkit-tap-highlight-color: transparent;
+	@include user-select(none);
+
+	@media (min-width: $screen-sm-min) {
+		@include transform-origin(scale(.75));
+	}
+
+	&-left {
+		left: 0;
+
+		@media (min-width: $screen-sm-min) {
+			@include transform-origin(0);
+		}
+	}
+
+	&-right  {
+		right: 0;
+
+		@media (min-width: $screen-sm-min) {
+			@include transform-origin(100%);
+		}
+	}
+}
+
+.mfp-arrow .mfp-a, .mfp-arrow .mfp-b, .mfp-arrow:after, .mfp-arrow:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	display: block;
+	width: 0;
+	height: 0;
+	margin-top: 35px;
+	margin-left: 35px;
+
+	border: inset transparent;
+
+	content: '';
+}
+
+.mfp-arrow .mfp-b, .mfp-arrow:before {
+	border-top-width: 21px;
+	border-bottom-width: 21px;
+
+	opacity: .4;
+}
+
+.mfp-arrow .mfp-a, .mfp-arrow:after {
+	top: 8px;
+
+	border-top-width: 13px;
+	border-bottom-width: 13px;
+}
+
+.mfp-arrow-left .mfp-b, .mfp-arrow-left:before {
+	margin-left: 25px;
+
+	border-right: 27px solid $black-light;
+}
+
+.mfp-arrow-left .mfp-a, .mfp-arrow-left:after {
+	margin-left: 31px;
+
+	border-right: 17px solid $white;
+}
+
+.mfp-arrow-right .mfp-b, .mfp-arrow-right:before {
+	border-left: 27px solid $black-light;
+}
+
+.mfp-arrow-right .mfp-a, .mfp-arrow-right:after {
+	margin-left: 39px;
+
+	border-left: 17px solid $white;
+}
+
+/* Close button top right */ 
+.mfp-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 44px;
+	height: 44px;
+
+	font-family: Arial,Baskerville,monospace;
+	color: $white;
+	font-size: 28px; 
+	font-style: normal;
+	line-height: 44px;
+	text-decoration: none;
+	text-align: center;
+
+	opacity: .65;
+	@include user-select(none);
+}
+
+/* Meta data bottom image */ 
+.mfp-bottom-bar {
+	position: absolute;
+	top: 100%;
+	left: 0;
+
+	width: 100%;
+	margin-top: -36px;
+
+	cursor: auto;
+}
+
+.mfp-title {
+	display: none;
+}
+
+.mfp-preloader {
+	display: none;
+}
+
+.mfp-counter {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	color: #CCC;
+	font-size: 12px;
+	line-height: 18px;
+	white-space: nowrap; 
+
+	@include user-select(none);
+}
+

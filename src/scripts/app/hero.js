@@ -2,10 +2,14 @@ var energym = energym || {};
 
 energym.hero = (($, window, undefined) => {
 
-    let init, initParallax;
+    let init, resizeHero, initParallax;
 
     init = () => {
         $('.hero').addClass('hero--parallaxed');
+    };
+
+    resizeHero = () => {
+        $('.hero').height( $(window).height() );
     };
 
     initParallax = () => {        
@@ -18,6 +22,7 @@ energym.hero = (($, window, undefined) => {
 
     return {
         init: init,
+        resizeHero: resizeHero,
         initParallax: initParallax
     };
 

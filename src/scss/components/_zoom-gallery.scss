@@ -1,0 +1,31 @@
+.zoom-gallery {
+	font-size: 0;
+
+	& img, & a {
+		box-shadow: 0 0 8px rgba(0,0,0,.9);
+	}
+
+	& a {
+		outline: none;
+	}
+}
+
+.zoom-gallery__img-1 {
+	width: 32%;
+	float: right;
+}
+
+.zoom-gallery__img-2 {
+	width: 66%;
+	margin-bottom: 2%; 
+}
+
+.zoom-gallery__img-3 {
+	width: 32%;
+	margin-right: 2%; 
+}
+
+.zoom-gallery__img-4 {
+	width: 32%;
+	margin-right: 2%; 
+}

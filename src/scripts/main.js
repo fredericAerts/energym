@@ -7,8 +7,9 @@ energym.app = (($, window, undefined) => {
 
     // On Dom ready
     init = () => {
+        energym.hero.resizeHero();
         energym.hero.initParallax();
-        console.log('hello','init');
+        energym.popup.init();
     };
 
 
@@ -36,16 +37,9 @@ energym.app = (($, window, undefined) => {
     };
 
     // On Resize
-    appResize = function() {
-        var _resizeHero;
-
-        _resizeHero = function() {
-            $('.hero').height( $(window).height() );
-        };
-        _resizeHero();
-
-        $(window).resize(function() {
-            _resizeHero();
+    appResize = () => {
+        $(window).resize(() => {
+            energym.hero.resizeHero();
         });
     };
 

@@ -23,6 +23,7 @@ var paths = {
       ],
       js: [
         'bower_components/jquery/dist/jquery.js',
+        'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
         'src/scripts/vendor/*.js',
         'src/scripts/app/*.js',
         'src/scripts/*.js'

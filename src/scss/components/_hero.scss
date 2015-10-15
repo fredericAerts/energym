@@ -1,6 +1,8 @@
 .hero {
   position: relative;
   
+  height: 3000px; // placeholder on load -> gets js overwritten when DOM loaded
+
   font-family: "Montserrat", sans-serif;
   letter-spacing: 2px;
   text-align: center;
@@ -52,7 +54,7 @@
   border-top: 2px solid $color-accent;
   border-bottom: 2px solid $color-accent;
 
-   @media (min-width: $screen-sm-min) {
+  @media (min-width: $screen-sm-min) {
     font-size: 18px;    
   }
 }
