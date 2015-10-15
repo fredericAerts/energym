@@ -9,7 +9,7 @@ energym.popup = (($, window, undefined) => {
 			delegate: 'a',
 			type: 'image',
 			closeOnContentClick: false,
-			closeBtnInside: false,
+			closeBtnInside: true,
 			mainClass: 'mfp-with-zoom mfp-img-mobile',
 			image: {
 				verticalFit: true,
