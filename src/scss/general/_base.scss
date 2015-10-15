@@ -1,0 +1,17 @@
+body {
+	
+	height: 2000px;
+
+	font-size: 14px;
+	color: $white;
+
+	background: $black-light;
+
+	overflow: hidden;
+
+	&.active {
+		height: auto;
+
+		overflow: auto; 
+	}
+}
