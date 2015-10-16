@@ -1,0 +1,39 @@
+.container--details {
+	margin-bottom: $vertical-margin;
+}
+
+.details {
+	padding: 20px;
+
+	color: $white;
+	font-size: 18px;
+	line-height: 1.2;
+
+	border: 1px solid $white;
+	box-shadow: 0 0 8px rgba(0,0,0,.9);
+}
+
+.details__item {
+	position: relative;
+
+	padding: 10px 0 10px 30px;
+
+	& span {
+		white-space: nowrap;
+	}
+
+	& a {
+		display: block;
+
+		color: $white;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+}
+
+.details__item__icon {
+	position: absolute;
+	top: 12px;
+	left: 0;
+}

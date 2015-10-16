@@ -1,13 +1,14 @@
 .hero {
   position: relative;
   
+  margin-bottom: $vertical-margin;
   height: 3000px; // placeholder on load -> gets js overwritten when DOM loaded
 
-  font-family: "Montserrat", sans-serif;
+  font-weight: $font-weight-400;
   letter-spacing: 2px;
   text-align: center;
 
-  box-shadow: inset 0 0 8px rgba(0,0,0,.9);
+  // box-shadow: inset 0 0 8px rgba(0,0,0,.9);
 
   overflow: hidden;
 

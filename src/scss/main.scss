@@ -8,6 +8,10 @@
 	=============================== */
 @import	'helpers/variables';
 
+/*	Fonts
+	=============================== */
+@import 'fonts/icomoon';
+
 /*	General
 	=============================== */
 @import 'general/base',
@@ -16,7 +20,12 @@
 /*	Components
 	=============================== */
 @import 'components/hero',
+		'components/quote',
+		'components/subtitle',
+		'components/facilities',
 		'components/zoom-gallery',
 		'components/popup',
-		'components/google-map';
+		'components/details',
+		'components/google-map',
+		'components/footer';
 

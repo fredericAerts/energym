@@ -3,7 +3,7 @@ var energym = energym || {};
 energym.app = (($, window, undefined) => {
 
     let init, 
-        initOnload, 
+        initOnload,
         appScroll, 
         appResize, 
         getOrientation, 
@@ -16,9 +16,9 @@ energym.app = (($, window, undefined) => {
     init = () => {
         energym.hero.resizeHero();
         energym.hero.initParallax();
+        energym.matchHeight.init();
         energym.popup.init();
     };
-
 
     // On All loaded
     initOnload = () => {

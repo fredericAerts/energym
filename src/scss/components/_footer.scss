@@ -1,0 +1,53 @@
+.footer {
+	position: relative;
+	padding: 15px 0;
+}
+
+.footer__content-info {
+	float: left;
+
+	padding-top: 7px;
+
+	& a {
+		color: $white;
+		font-weight: $font-weight-400;
+	}
+}
+
+.footer__btw {
+	display: none;
+
+	@media (min-width: $screen-sm-min) {
+		position: absolute;
+		left: 50%;
+		bottom: 15px;
+		@include transform(translateX(-50%));
+
+		display: inline-block;
+		padding-top: 7px;
+	}
+}
+
+.footer__share {
+	float: right;
+
+	color: $white;
+
+	&:hover, &:active, &:focus, &:visited {
+		color: $white;
+		text-decoration: none;
+	}
+
+	& span {
+		display: inline-block;
+		margin-right: 7px;
+		padding-top: 7px;
+
+		font-weight: $font-weight-400;
+	}
+
+	& i {
+		font-size: 20px;
+		color: $color-facebook;
+	}
+}
