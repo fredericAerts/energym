@@ -19,7 +19,7 @@ energym.popup = (($, window, undefined) => {
 			},
 			gallery: {
 				enabled: true,
-				preload: [1,2]
+				preload: [3,3]
 			},
 			zoom: {
 				enabled: true,

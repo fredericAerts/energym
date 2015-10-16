@@ -2,8 +2,15 @@ var energym = energym || {};
 
 energym.app = (($, window, undefined) => {
 
-    let init, initOnload, appScroll, appResize, debounce;
+    let init, 
+        initOnload, 
+        appScroll, 
+        appResize, 
+        getOrientation, 
+        setOrientation, 
+        debounce;
 
+    let orientation;
 
     // On Dom ready
     init = () => {
@@ -20,7 +27,7 @@ energym.app = (($, window, undefined) => {
         setTimeout(() => {
             energym.hero.init();
             energym.loader.dissipate();
-        }, 1500);
+        }, 1000);
     };
 
     // On Scroll
@@ -38,9 +45,28 @@ energym.app = (($, window, undefined) => {
 
     // On Resize
     appResize = () => {
+        let _onResize;
+        orientation = getOrientation();
+
+        _onResize = debounce(() => {
+            let currentOrientation = getOrientation();
+            if(currentOrientation !== orientation) {
+                energym.hero.resizeHero();
+                setOrientation(currentOrientation);
+            }
+        }, 50);
+
         $(window).resize(() => {
-            energym.hero.resizeHero();
+           _onResize(); 
         });
+    };
+
+    getOrientation = () => {
+        return $(window).height() < $(window).width() ? "landscape" : "portrait";
+    };
+
+    setOrientation = (currentOrientation) => {
+        orientation = currentOrientation;
     };
 
     debounce = (func, wait, immediate) => {
