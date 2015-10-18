@@ -25,7 +25,6 @@ energym.app = (($, window, undefined) => {
         energym.preloadImages.init();
         setTimeout(() => {
             energym.hero.init();
-            energym.loader.dissipate();
         }, 1000);
     };
 

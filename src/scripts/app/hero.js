@@ -5,6 +5,7 @@ energym.hero = (($, window, undefined) => {
     let init, resizeHero, initParallax;
 
     init = () => {
+        // hero arrow click handler
         $('.js-hero__arrow-wrapper').click(function(event) {
             event.preventDefault();
             var offset = 75;
@@ -13,7 +14,11 @@ energym.hero = (($, window, undefined) => {
                 scrollTop: target
             }, 1000, "easeOutQuart");            
         });
+
         $('.hero').addClass('hero--parallaxed');
+
+        $('body').addClass('active');
+        $('.hero__arrow').addClass('hero__arrow--active');
     };
 
     resizeHero = () => {
