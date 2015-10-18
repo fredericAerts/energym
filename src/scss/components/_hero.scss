@@ -77,10 +77,11 @@
 }
 
 .hero__arrow-wrapper {
-  display: block;
   width: 80px;
   margin: 40px auto 0;
   padding: 15px;
+
+  cursor: pointer;
 }
 
 .hero__arrow {

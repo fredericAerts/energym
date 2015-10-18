@@ -5,6 +5,14 @@ energym.hero = (($, window, undefined) => {
     let init, resizeHero, initParallax;
 
     init = () => {
+        $('.js-hero__arrow-wrapper').click(function(event) {
+            event.preventDefault();
+            var offset = 75;
+            var target = $('.js-quote').offset().top - offset;
+            $('html, body').animate({
+                scrollTop: target
+            }, 1000, "easeOutQuart");            
+        });
         $('.hero').addClass('hero--parallaxed');
     };
 
