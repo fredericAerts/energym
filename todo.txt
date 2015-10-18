@@ -1,1 +1,2 @@
+- hero arrow navigation
 - load first gallery images in background on allLoaded

@@ -36,4 +36,11 @@
 	position: absolute;
 	top: 12px;
 	left: 0;
+
+	color: $color-accent;
+
+	&.icon-facebook {
+		top: 9px;
+		left: -2px;
+	}
 }

@@ -4,7 +4,6 @@ energym.app = (($, window, undefined) => {
 
     let init, 
         initOnload,
-        appScroll, 
         appResize, 
         getOrientation, 
         setOrientation, 
@@ -22,25 +21,12 @@ energym.app = (($, window, undefined) => {
 
     // On All loaded
     initOnload = () => {
-        appScroll();
         appResize();
+        energym.preloadImages.init();
         setTimeout(() => {
             energym.hero.init();
             energym.loader.dissipate();
         }, 1000);
-    };
-
-    // On Scroll
-    appScroll = () => {
-        let _onScroll;
-
-        _onScroll = debounce(() => {
-            console.log('scrolling');
-        }, 50);
-
-        $(window).scroll(() =>{
-            _onScroll();
-        });
     };
 
     // On Resize

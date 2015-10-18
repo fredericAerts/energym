@@ -19,13 +19,18 @@ energym.popup = (($, window, undefined) => {
 			},
 			gallery: {
 				enabled: true,
-				preload: [3,3]
+				preload: [1,1]
 			},
 			zoom: {
 				enabled: true,
 				duration: 300, // don't forget to change the duration also in CSS
 				opener: function(element) {
 					return element.find('img');
+				}
+			},
+			callbacks: {
+				lazyLoad: function(item) {
+					console.log(item);
 				}
 			}
 			
